@@ -116,23 +116,29 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// Contact Form Handler
+// Contact Form Handler - Direct to Gmail
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
     e.preventDefault();
     
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
     
-    // Show success message
-    alert(`Thank you ${name}! Your message has been received.\n\nWe'll get back to you at ${email} soon!`);
+    const recipient = 'bungarylla@gmail.com';
+    const subject = encodeURIComponent(`Message from ${name}`);
+    const body = encodeURIComponent(`Hi Bunga Rylla,\n\n${message}\n\nFrom: ${name}\nEmail: ${email}`);
+    
+    // Redirect to Gmail compose in new tab
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
+    const newTab = window.open(gmailUrl, '_blank');
+    if (!newTab || newTab.closed) {
+      // Fallback if popup blocked: redirect in same tab
+      window.location.href = gmailUrl;
+    }
     
     // Reset form
     contactForm.reset();
-    
-    // Optional: Log to console (you can replace this with actual backend API call)
-    console.log('Form submitted:', { name, email, message });
   });
 }
