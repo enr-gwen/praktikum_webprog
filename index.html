@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Bunga Rylla Octarmadhany - Web Developer Portfolio</title>
+    <title>Bunga Rylla Octaramadhany - Web Developer Portfolio</title>
 </head>
 <body>
+    <!-- Constellation Canvas Background -->
+    <canvas id="constellation-canvas"></canvas>
+    
     <!-- Navigation -->
     <header>
         <nav class="nav">
@@ -14,7 +17,7 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -28,163 +31,180 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="parallax-bg"></div>
         <div class="hero-content">
-            <p class="greeting">Hi there! I'm</p>
-            <h1 class="hero-title">Bunga Rylla Octarmadhany</h1>
-            <p class="hero-subtitle">Web & UI/UX Enthusiast | Data-Oriented Learner | Creative Thinker</p>
-            <p class="hero-description">
+            <p class="greeting" data-parallax="0.15">Hi there! I'm</p>
+            <h1 class="hero-title" data-parallax="0.25">Bunga Rylla Octaramadhany</h1>
+            <p class="hero-subtitle" data-parallax="0.35">Fullstack Developer | AI Enthusiast</p>
+            <p class="hero-description" data-parallax="0.45">
                 I enjoy creating user-friendly web interfaces while exploring data-driven and intelligent technologies.
-
             </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            <div class="hero-buttons" data-parallax="0.55">
+                <a href="#about" class="btn btn-primary">Learn More About Me</a>
+                <a href="#projects" class="btn btn-outline">View Projects</a>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
+        <div class="parallax-bg"></div>
+        <div class="flip-card" data-parallax="0.4">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="about-content">
+                        <div class="about-icon">👋</div>
+                        <h3>Fullstack Developer & AI Enthusiast</h3>
+                        <p class="Fullsabout-intro">
+                            I build responsive web applications integrated with Machine Learning models, 
+                            transforming intelligent algorithms into practical, user-friendly solutions.
+                        </p>
+                        <div class="skills-grid">
+                            <div class="skill-item" data-parallax="0.3">
+                                <span class="skill-icon">🎨</span>
+                                <span class="skill-name">Frontend</span>
+                                <span class="skill-tech">HTML • CSS • JS</span>
+                            </div>
+                            <div class="skill-item" data-parallax="0.35">
+                                <span class="skill-icon">⚙️</span>
+                                <span class="skill-name">Backend</span>
+                                <span class="skill-tech">Python • REST API</span>
+                            </div>
+                            <div class="skill-item" data-parallax="0.4">
+                                <span class="skill-icon">🗄️</span>
+                                <span class="skill-name">Database</span>
+                                <span class="skill-tech">SQL</span>
+                            </div>
+                            <div class="skill-item" data-parallax="0.45">
+                                <span class="skill-icon">🤖</span>
+                                <span class="skill-name">AI/ML</span>
+                                <span class="skill-tech">TensorFlow • Scikit-learn</span>
+                            </div>
+                        </div>
+                        <p class="flip-hint">Hover to see my photo</p>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <img src="assets/profile-photo.jpg" alt="Bunga Rylla Octarmadhany">
+                    <h3>Bunga Rylla Octaramadhany</h3>
+                    <p>Fullstack Developer & AI Enthusiast</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="parallax-bg"></div>
         <div class="section-header">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title">Certifications</h2>
             <div class="title-underline"></div>
         </div>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Hello! I'm Bunga Rylla Octarmadhany (Student ID: 247006111068), a student with a growing interest in Machine Learning and Data Science. I started my journey through web development, which led me to develop an enthusiasm for UI/UX design and front-end development.</p>  
-
-                <p>Currently, I am focusing on strengthening my understanding of data-driven technologies while planning to expand my skills toward full-stack development. I am passionate about continuous learning and applying technology to create meaningful digital solutions.</p>
-
+        <div class="cert-container">
+            <div class="cert-card" data-parallax="0.25">
+                <img src="/assets/Ai.jpeg" alt="Dicoding Certificate 1">
+                <div class="cert-content">
+                    <h3>Artificial Intelligence Certificate</h3>
+                    <a href="https://www.dicoding.com/certificates/0LZ04LKRKP65" 
+                       target="_blank" class="btn btn-primary">
+                       View Certificate
+                    </a>
+                </div>
             </div>
-            <div class="about-stats">
-                <div class="stat-card">
-                    <div class="stat-number">10+</div>
-                    <div class="stat-label">Projects Completed</div>
+
+            <div class="cert-card" data-parallax="0.35">
+                <img src="/assets/DataScience.jpeg" alt="Dicoding Certificate 2">
+                <div class="cert-content">
+                    <h3>Data Science Certificate</h3>
+                    <a href="https://www.dicoding.com/certificates/GRX54M5VRP0M" 
+                       target="_blank" class="btn btn-primary">
+                       View Certificate
+                    </a>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">3+</div>
-                    <div class="stat-label">Years Learning</div>
+            </div>
+
+            <div class="cert-card" data-parallax="0.45">
+                <img src="/assets/Python.jpeg" alt="Dicoding Certificate 3">
+                <div class="cert-content">
+                    <h3>Python Certificate</h3>
+                    <a href="https://www.dicoding.com/certificates/QLZ9V52J9X5D" 
+                       target="_blank" class="btn btn-primary">
+                       View Certificate
+                    </a>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Dedication</div>
+            </div>
+
+            <div class="cert-card" data-parallax="0.55">
+                <img src="/assets/SQL.jpeg" alt="Dicoding Certificate 4">
+                <div class="cert-content">
+                    <h3>SQL Certificate</h3>
+                    <a href="https://www.dicoding.com/certificates/MRZMYO60NZYQ" 
+                       target="_blank" class="btn btn-primary">
+                       View Certificate
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="section-header">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="title-underline"></div>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon">💻</div>
-                <h3>Frontend Development</h3>
-                <div class="skill-tags">
-                    <span class="tag">HTML5</span>
-                    <span class="tag">CSS3</span>
-                    <span class="tag">JavaScript</span>
-                    <span class="tag">React</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🎨</div>
-                <h3>UI/UX Design</h3>
-                <div class="skill-tags">
-                    <span class="tag">Figma</span>
-                    <span class="tag">Adobe XD</span>
-                    <span class="tag">Responsive Design</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">⚙️</div>
-                <h3>Backend Development</h3>
-                <div class="skill-tags">
-                    <span class="tag">Node.js</span>
-                    <span class="tag">Django</span>
-                    <span class="tag">PostgreSQL</span>
-                </div>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🚀</div>
-                <h3>Tools & Others</h3>
-                <div class="skill-tags">
-                    <span class="tag">Git</span>
-                    <span class="tag">VS Code</span>
-                    <span class="tag">npm</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <div class="section-header">
+        <div class="parallax-bg"></div>
+        <div class="project-header">
             <h2 class="section-title">Featured Projects</h2>
             <div class="title-underline"></div>
         </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <a href="#" class="project-link">View Details →</a>
-                    </div>
+        <div class="project-container">
+            <div class="project-card" data-parallax="0.3">
+                <div class="project-header">
+                    <h3>NeuroLuka</h3>
                 </div>
-                <div class="project-info">
-                    <h3>Portfolio Website</h3>
-                    <p>A modern, responsive portfolio website built with HTML5, CSS3, and vanilla JavaScript featuring smooth animations and mobile-first design.</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
+                <div class="project-body">
+                    <p>
+                        A web-based application integrated with a Convolutional Neural Network (CNN) 
+                        built using TensorFlow for wound image classification. 
+                        The system analyzes wound images and generates treatment recommendations 
+                        based on prediction results.
+                    </p>
+                    <p class="tech">Python • TensorFlow • CNN • Computer Vision • HTML • CSS • JavaScript</p>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <a href="#" class="project-link">View Details →</a>
-                    </div>
-                </div>
-                <div class="project-info">
-                    <h3>E-Commerce Platform</h3>
-                    <p>Full-stack e-commerce solution with product catalog, shopping cart, user authentication, and payment integration using React and Node.js.</p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
+                <div class="project-footer">
+                    <a href="https://github.com/Tougashi/NeuroLuka" target="_blank" class="btn btn-primary">
+                        View GitHub
+                    </a>
                 </div>
             </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="project-overlay">
-                        <a href="#" class="project-link">View Details →</a>
-                    </div>
+
+            <div class="project-card" data-parallax="0.5">
+                <div class="project-header">
+                    <h3>Information System Web App</h3>
                 </div>
-                <div class="project-info">
-                    <h3>Blog Platform</h3>
-                    <p>Content management system with rich text editor, user roles, and SEO optimization built with Django and PostgreSQL database.</p>
-                    <div class="project-tags">
-                        <span class="tag">Django</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">PostgreSQL</span>
-                    </div>
+                <div class="project-body">
+                    <p>
+                        Academic system project implementing database-driven features 
+                        and system workflow logic.
+                    </p>
+                    <p class="tech">HTML • CSS • JavaScript </p>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/Noepath/uas-sisfor" target="_blank" class="btn btn-primary">
+                        View GitHub
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
+        <div class="parallax-bg"></div>
         <div class="section-header">
             <h2 class="section-title">Get In Touch</h2>
             <div class="title-underline"></div>
         </div>
-        <div class="contact-content">
+        <div class="contact-content" data-parallax="0.4">
             <div class="contact-info">
                 <p class="contact-description">
                     Have a project in mind or just want to chat? Feel free to reach out!
@@ -194,14 +214,14 @@
                         <div class="contact-icon">📧</div>
                         <div class="contact-details">
                             <h4>Email</h4>
-                            <p>bunga.rylla@example.com</p>
+                            <p>bungarylla@gmail.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">📱</div>
                         <div class="contact-details">
                             <h4>Phone</h4>
-                            <p>+62 812 3456 7890</p>
+                            <p>+6282315754785</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -213,20 +233,20 @@
                     </div>
                 </div>
                 <div class="social-links">
-                    <a href="#" class="social-link">LinkedIn</a>
-                    <a href="#" class="social-link">GitHub</a>
-                    <a href="#" class="social-link">Instagram</a>
+                    <a href="https://www.linkedin.com/in/bunga-rylla-octaramadhany-8b7250326/" class="social-link" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/enr-gwen" class="social-link" target="_blank">GitHub</a>
+                    <a href="https://www.instagram.com/gbrie1ll_?igsh=MWVlcmM2Y3RvZnc4" class="social-link" target="_blank">Instagram</a>
                 </div>
             </div>
-            <form class="contact-form">
+            <form class="contact-form" id="contactForm">
                 <div class="form-group">
-                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" placeholder="Your Email" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
@@ -235,7 +255,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 Bunga Rylla Octarmadhany. All rights reserved.</p>
+        <p>&copy; 2026 Bunga Rylla Octaramadhany. All rights reserved.</p>
         <p class="student-id">Student ID: 247006111068</p>
     </footer>
 
